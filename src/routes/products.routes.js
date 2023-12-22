@@ -11,7 +11,7 @@ import { verifyAuthenticateToken, isAdmin, isAdminOrPremium } from "../middlewar
 const router = Router();
 router.get("/", getAllProducts);
 router.get("/:id", getProductById);
-router.post("/", /*[verifyAuthenticateToken, isAdmin],*/ postProduct);
+router.post("/", [verifyAuthenticateToken, isAdmin], postProduct);
 router.put("/:id", [verifyAuthenticateToken, isAdmin], updateProduct);
 router.delete("/:id", [verifyAuthenticateToken, isAdminOrPremium], deleteProduct);
 
