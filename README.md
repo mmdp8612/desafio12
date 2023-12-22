@@ -1,8 +1,11 @@
-## Información sobre el Desafio 11
+## Información sobre el Desafio 12
 
-Se agrego la documentacion de las rutas de Productos y Carrito para ello se utilizaron las librerias **swagger-jsdoc** y **swagger-ui-express**, para acceder a la documentacion se debe utilizar la ruta: **http://localhost:8080/api-docs**.
+Se agrego la posibilidad de realizar testing unitario, para ello se agregaron las librerias "chai", "mocha" y "supertest".
+Se agrego el archivo **test/supertest.test.js** en el raiz del producto. Ademas se agrego en el package.json el comando "test" el cual permite correr el test: **npm run test**
 
 ## Temas de clases pasadas
+
+Se agrego la documentacion de las rutas de Productos y Carrito para ello se utilizaron las librerias **swagger-jsdoc** y **swagger-ui-express**, para acceder a la documentacion se debe utilizar la ruta: **http://localhost:8080/api-docs**.
 
 Se agrego la posibilidad de recuperar y cambiar la contraseña, para ello se creo la ruta **http://localhost:8080/view/olvido** alli se debe proporcionar un email valido que este asociado a alguna de las cuentas de usuario creada y le llegara un email con un link 
 **http://localhost:8080/view/recuperar/:token** que abrira un formulario que permite escribir una nueva contraseña, la misma no debe ser igual a la anterior, ademas este link caducara pasada la hora.
